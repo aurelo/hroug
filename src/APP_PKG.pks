@@ -1,22 +1,22 @@
 create or replace package app_pkg
 is
 /*******************************************************************************
- Package for working with application parameters infrastructure
- Demonstrates working with anydata build in object type
+ Paket za rad sa infrastrukturom aplikacijskih parametara
+ U paketu se pokazuje rad sa Oracle Any tipovima
  <p>
- Package is distributed with example code for lecture Oracle Object Types given
- on HROUG 19(@link www.hroug.hr) conference.
+ Paket se distribuira kao primjer koda za prezentaciju Oracle Objektni tipovi
+ danu na 19. HROUG (@link www.hroug.hr) konferenciji
 
 %author Zlatko Gudasic
 
 CHANGE HISTORY (last one on top!)
 
-When         Who 
+When         Who
 dd.mm.yyyy   What
 ================================================================================
-13.08.2014   Zlatko Gudasic         
-             Initial creation
-             
+13.08.2014   Zlatko Gudasic
+             Incijalna kreacija
+
 *******************************************************************************/
 
    function get_number(
