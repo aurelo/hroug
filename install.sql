@@ -10,6 +10,12 @@ PROMPT Creating tables...
 PROMPT Creating base package specs
 @@src/app_pkg.pks
 @@src/hroug_utils_pkg.pks
+@@src/uplate_queue_pkg.pks
+
+------------                       CREATE QUEUE CALLBACK PROCEDURES   ----------
+@@src/sms_callback.prc
+@@src/regulator_check_callback.prc
+
 
 ------------                       CREATE TYPES                       ----------
 @@src/potrazivanje_ot.tps
@@ -38,6 +44,7 @@ PROMPT Creating types dependant package specs
 PROMPT Creating package bodies
 @@src/app_pkg.pkb
 @@src/hroug_utils_pkg.pkb
+@@src/uplate_queue_pkg.pks
 @@src/transakcije_pkg.pkb
 @@src/prioriteti_naplate_pkg.pkb
 @@src/naplata_pkg.pkb
