@@ -6,6 +6,7 @@ SET TERMOUT ON
 @@src/tests/ut_potrazivanje_ot.pks
 @@src/tests/ut_naplata_po_starosti_ot.pks
 @@src/tests/ut_naplata_po_namjeni_ot.pks
+@@src/tests/ut_strategija_naplate_ot.pks
 
 
 ------------                       CREATE PACKAGE BODY                ----------
@@ -13,4 +14,5 @@ SET TERMOUT ON
 @@src/tests/ut_potrazivanje_ot.pkb
 @@src/tests/ut_naplata_po_starosti_ot.pkb
 @@src/tests/ut_naplata_po_namjeni_ot.pks
+@@src/tests/ut_strategija_naplate_ot.pkb
 
