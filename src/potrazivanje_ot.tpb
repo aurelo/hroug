@@ -23,5 +23,20 @@ create or replace type body potrazivanje_ot as
   begin
      return id;
   end;
+
+  static function KAMATA
+  return varchar2
+  is
+  begin
+     return 'KAMATA';
+  end;
+  
+  static function GLAVNICA
+  return varchar2
+  is
+  begin
+     return 'GLAVNICA';
+  end;
+  
 end;
 /

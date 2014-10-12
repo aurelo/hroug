@@ -10,6 +10,8 @@ is
        utPackage.add (C_TEST_SUITE_NAME, 'naplata_po_starosti_ot'); 
        utPackage.add (C_TEST_SUITE_NAME, 'naplata_po_namjeni_ot');   
        utPackage.add (C_TEST_SUITE_NAME, 'strategija_naplate_ot');  
+       utPackage.add (C_TEST_SUITE_NAME, 'prioriteti_naplate_pkg');  
+       utPackage.add (C_TEST_SUITE_NAME, 'uplate_queue_pkg');  
    end;
    
    procedure run_tests

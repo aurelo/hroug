@@ -20,11 +20,11 @@ as
          return null;
       end if;
       
-      if    self.potrazivanje.namjena = 'KAMATA' 
-      and   p_druga_instanca.potrazivanje.namjena != 'KAMATA' 
+      if    self.potrazivanje.namjena = potrazivanje_ot.KAMATA 
+      and   p_druga_instanca.potrazivanje.namjena != potrazivanje_ot.KAMATA
          then return 1; 
-      elsif self.potrazivanje.namjena != 'KAMATA' 
-      and   p_druga_instanca.potrazivanje.namjena = 'KAMATA' 
+      elsif self.potrazivanje.namjena != potrazivanje_ot.KAMATA
+      and   p_druga_instanca.potrazivanje.namjena = potrazivanje_ot.KAMATA 
          then return -1;
       else return 0; 
       end if;

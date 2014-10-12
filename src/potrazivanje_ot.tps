@@ -25,5 +25,9 @@ dd.mm.yyyy   What
   return varchar2
  ,final member procedure output
  ,map member  function id_usporedba return integer
+ ,static function KAMATA
+  return varchar2
+ ,static function GLAVNICA
+  return varchar2
 )
 /

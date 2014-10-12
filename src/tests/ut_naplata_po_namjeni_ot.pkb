@@ -10,12 +10,12 @@ as
    procedure ut_setup
    is
    begin
-       g_kamata_1      := potrazivanje_ot(1, 155, interval '15' day, 'KAMATA');
-       g_kamata_2      := potrazivanje_ot(2, 188, interval '45' day, 'KAMATA');
-       g_kamata_3      := potrazivanje_ot(3, 188, interval '100' day, 'KAMATA');
-       g_glavnica_1    := potrazivanje_ot(4, 1564, interval '150' day, 'GLAVNICA');
-       g_glavnica_2    := potrazivanje_ot(5, 3265.55, interval '550' day, 'GLAVNICA');
-       g_glavnica_3    := potrazivanje_ot(6, 188, interval '100' day, 'GLAVNICA');
+       g_kamata_1      := potrazivanje_ot(1, 155, interval '15' day, potrazivanje_ot.KAMATA);
+       g_kamata_2      := potrazivanje_ot(2, 188, interval '45' day, potrazivanje_ot.KAMATA);
+       g_kamata_3      := potrazivanje_ot(3, 188, interval '100' day, potrazivanje_ot.KAMATA);
+       g_glavnica_1    := potrazivanje_ot(4, 1564, interval '150' day, potrazivanje_ot.GLAVNICA);
+       g_glavnica_2    := potrazivanje_ot(5, 3265.55, interval '550' day, potrazivanje_ot.GLAVNICA);
+       g_glavnica_3    := potrazivanje_ot(6, 188, interval '100' day, potrazivanje_ot.GLAVNICA);
    end;
    
    procedure ut_teardown

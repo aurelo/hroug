@@ -6,8 +6,8 @@ as
    procedure ut_setup
    is
    begin
-       g_kamata_1      := potrazivanje_ot(1, 155, interval '15' day, 'KAMATA');
-       g_glavnica_1    := potrazivanje_ot(2, 1550, interval '150' day, 'GLAVNICA');
+       g_kamata_1      := potrazivanje_ot(1, 155, interval '15' day, potrazivanje_ot.KAMATA);
+       g_glavnica_1    := potrazivanje_ot(2, 1550, interval '150' day, potrazivanje_ot.GLAVNICA);
     end;
    
    procedure ut_teardown
