@@ -7,6 +7,8 @@ is
    begin
        utSuite.add (C_TEST_SUITE_NAME);
        utPackage.add (C_TEST_SUITE_NAME, 'potrazivanje_ot'); 
+       utPackage.add (C_TEST_SUITE_NAME, 'naplata_po_starosti_ot'); 
+       utPackage.add (C_TEST_SUITE_NAME, 'naplata_po_namjeni_ot');       
    end;
    
    procedure run_tests

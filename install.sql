@@ -17,6 +17,8 @@ PROMPT Creating package specs
 @@src/strategija_naplate_ot.tpb
 @@src/naplata_po_starosti_ot.tps
 @@src/naplata_po_starosti_ot.tpb
+@@src/naplata_po_namjeni_ot.tps
+@@src/naplata_po_namjeni_ot.tpb
 
 ------------                       CREATE VIEWS                       ----------
 @@src/app_env_param_vw.sql
