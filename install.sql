@@ -11,6 +11,12 @@ PROMPT Creating package specs
 @@src/app_pkg.pks
 
 ------------                       CREATE TYPES                       ----------
+@@src/potrazivanje_ot.tps
+@@src/potrazivanje_ot.tpb
+@@src/strategija_naplate_ot.tps
+@@src/strategija_naplate_ot.tpb
+@@src/naplata_po_starosti_ot.tps
+@@src/naplata_po_starosti_ot.tpb
 
 ------------                       CREATE VIEWS                       ----------
 @@src/app_env_param_vw.sql
