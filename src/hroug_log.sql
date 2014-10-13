@@ -19,7 +19,10 @@ create or replace trigger hroug_log_bir
 before insert on hroug_log
 for each row
 begin
-  :new.id             := hroug_log_seq.nextval;
+  --:new.id             := hroug_log_seq.nextval;
+  select    hroug_log_seq.nextval
+  into      :new.id
+  from      dual;
   :new.datum_kreacije := systimestamp; 
 end;
 /

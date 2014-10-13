@@ -19,6 +19,7 @@ PROMPT Creating types
 @@src/potrazivanja_tt.sql
 @@src/strategija_naplate_ot.tps
 @@src/strategija_naplate_ot.tpb
+@@src/strategije_naplate_tt.tps
 @@src/naplata_po_starosti_ot.tps
 @@src/naplata_po_starosti_ot.tpb
 @@src/naplata_po_namjeni_ot.tps

@@ -20,8 +20,8 @@ SET TERMOUT ON
 @@src/tests/ut_naplata_po_namjeni_ot.pkb
 @@src/tests/ut_strategija_naplate_ot.pkb
 @@src/tests/ut_uplate_queue_pkg.pkb
-@@src/tests/ut_prioriteti_naplate_pkg.pks
+@@src/tests/ut_prioriteti_naplate_pkg.pkb
 @@src/tests/ut_app_pkg.pkb
 @@src/tests/ut_sms_callback.pkb
-@@src/tests/ut_regulator_check_callback.pks
+@@src/tests/ut_regulator_check_callback.pkb
 

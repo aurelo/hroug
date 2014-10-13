@@ -1,6 +1,6 @@
 create or replace package body hroug_utils_pkg
 /*******************************************************************************
-@author Zlatko Gudasic
+%author Zlatko Gudasic
 
 CHANGE HISTORY (last one on top!)
 
