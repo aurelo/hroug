@@ -57,7 +57,7 @@ drop_uplate_queue:
 uplate_queue_sub_exists:
  Provjerava postoji li pretplatnik na red uplata
  
-@param p_subscriber_name  ime pretplatnika za kojeg zelimo provjeriti postojanje
+%param p_subscriber_name  ime pretplatnika za kojeg zelimo provjeriti postojanje
 ------------------------------------------------------------------------------*/   
    function uplate_queue_sub_exists(
     p_subscriber_name     in    user_objects.object_name%type

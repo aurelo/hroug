@@ -36,9 +36,9 @@ as
 assert:
  Funkcija koja provjerava trvrdnju 
  
-@param   p_condition       Uvijet za provjeru
-@param   p_poruka         Poruka ako uvijet nije istinit
-@param   p_error_id        Custom identifikator za dignutu gresku
+%param   p_condition       Uvijet za provjeru
+%param   p_poruka          Poruka ako uvijet nije istinit
+%param   p_error_id        Custom identifikator za dignutu gresku
 ------------------------------------------------------------------------------*/
     procedure assert(
      p_condition        in    boolean
@@ -51,9 +51,9 @@ require:
  Funkcija koja provjerava preduvijet (uvijet pod kojima je poziv procedure 
  legitiman)
 
-@param   p_condition       Uvijet za provjeru
-@param   p_poruka         Poruka ako uvijet nije istinit
-@param   p_error_id        Custom identifikator za dignutu gresku
+%param   p_condition       Uvijet za provjeru
+%param   p_poruka         Poruka ako uvijet nije istinit
+%param   p_error_id        Custom identifikator za dignutu gresku
 ------------------------------------------------------------------------------*/
     procedure require(
      p_condition        in    boolean
@@ -67,9 +67,9 @@ ensure:
  Funkcija koja provjerava postuvijet (uvijet koji se mora ispuniti prilikom
  povratka iz funkcije ili procedure)
 
-@param   p_condition       Uvijet za provjeru
-@param   p_poruka         Poruka ako uvijet nije istinit
-@param   p_error_id        Custom identifikator za dignutu gresku
+%param   p_condition       Uvijet za provjeru
+%param   p_poruka          Poruka ako uvijet nije istinit
+%param   p_error_id        Custom identifikator za dignutu gresku
 ------------------------------------------------------------------------------*/
     procedure ensure(
      p_condition        in    boolean
@@ -85,9 +85,9 @@ log:
  gdje mijenja pravu implementaciju i daje nacin testiranja procedure (na nacin
  da se provjerava je li procedura popunila ovu tablicu).  
 
-@param   p_poruka         Poruka koju je potrebno logirati
-@param   p_plsql_unit      plsql unit koji je pozvao logiranje
-@param   p_plsql_line      linija iz plsql unit-a iz koje je pozvano logiranje
+%param   p_poruka         Poruka koju je potrebno logirati
+%param   p_plsql_unit      plsql unit koji je pozvao logiranje
+%param   p_plsql_line      linija iz plsql unit-a iz koje je pozvano logiranje
 ------------------------------------------------------------------------------*/
     procedure log(
       p_poruka      in   varchar2
@@ -107,7 +107,7 @@ clear_log_tab:
 log_tab_count:
  Vraca broj redova u hroug_log tablici
 
-@return number of rows in hroug_log table
+%return number of rows in hroug_log table
 ------------------------------------------------------------------------------*/
     function log_tab_count
     return   pls_integer;
@@ -117,8 +117,8 @@ log_tab_count:
 log_tab_filled_from:
  Provjerava je li hroug_log tablica punjena iz plsql unit-a
 
-@param   p_plsql_unit      plsql unit za provjeriti
-@return  true ako je tablica punjena iz upitnog programa, false inace
+%param   p_plsql_unit      plsql unit za provjeriti
+%return  true ako je tablica punjena iz upitnog programa, false inace
 ------------------------------------------------------------------------------*/
     function log_tab_filled_from(
      p_plsql_unit     in    varchar2
@@ -130,8 +130,8 @@ log_tab_filled_from:
 log_tab_contains:
  Provjerava sadrzi li hroug_log tablica odredjenu poruku
 
-@param   p_poruka         Poruka za provjeru
-@return  true ako sadrzi poruku, false inace
+%param   p_poruka         Poruka za provjeru
+%return  true ako sadrzi poruku, false inace
 ------------------------------------------------------------------------------*/
     function log_tab_contains(
      p_poruka     in    varchar2
@@ -148,9 +148,9 @@ who_called_me:
  level needs to be increased from the default to find out who the real 
  caller's caller is.
 
-@credit Tom Kyte.
+%credit Tom Kyte.
 
-@param i_stack_level The depth in the stack to look for caller info.
+%param i_stack_level The depth in the stack to look for caller info.
 ------------------------------------------------------------------------------*/
   function who_called_me(p_stack_level in pls_integer default 1)  
   return   stack_data_tab_type;

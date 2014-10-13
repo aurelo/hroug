@@ -12,12 +12,8 @@ PROMPT Creating base package specs
 @@src/hroug_utils_pkg.pks
 @@src/uplate_queue_pkg.pks
 
-------------                       CREATE QUEUE CALLBACK PROCEDURES   ----------
-@@src/sms_callback.prc
-@@src/regulator_check_callback.prc
-
-
 ------------                       CREATE TYPES                       ----------
+PROMPT Creating types
 @@src/potrazivanje_ot.tps
 @@src/potrazivanje_ot.tpb
 @@src/potrazivanja_tt.sql
@@ -37,6 +33,7 @@ PROMPT Creating types dependant package specs
 @@src/prioriteti_naplate_pkg.pks
 @@src/naplata_pkg.pks
 ------------                       CREATE VIEWS                       ----------
+PROMPT Creating views
 @@src/app_env_param_vw.sql
 
 
@@ -44,10 +41,15 @@ PROMPT Creating types dependant package specs
 PROMPT Creating package bodies
 @@src/app_pkg.pkb
 @@src/hroug_utils_pkg.pkb
-@@src/uplate_queue_pkg.pks
+@@src/uplate_queue_pkg.pkb
 @@src/transakcije_pkg.pkb
 @@src/prioriteti_naplate_pkg.pkb
 @@src/naplata_pkg.pkb
+
+------------                       CREATE QUEUE CALLBACK PROCEDURES   ----------
+PROMPT Creating queue callback procedures
+@@src/sms_callback.prc
+@@src/regulator_check_callback.prc
 
 ------------                       SCRIPTS                            ----------
 PROMPT Running post installation scripts

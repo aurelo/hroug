@@ -13,7 +13,7 @@ alter table hroug_log add (
 )
 ;
 -------------------------------------------------------------------------------
-PROMPT Creating table HROUG_LOG_SEQ...
+PROMPT Creating sequence HROUG_LOG_SEQ...
 create sequence hroug_log_seq;
 create or replace trigger hroug_log_bir
 before insert on hroug_log
