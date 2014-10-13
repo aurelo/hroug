@@ -57,4 +57,10 @@ PROMPT Running post installation scripts
 exec hroug_utils_pkg.insert_app_regulator_param;
 exec hroug_utils_pkg.create_uplate_queue;
 
+
+------------                       KLIJENT                            ----------
+PROMPT Installing client example
+@@src/klijent_primjer.prc
+
+
 PROMPT Done.
