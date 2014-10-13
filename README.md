@@ -11,10 +11,10 @@ Preporuka je instalirati primjere u za to predviđenu schemu, pa dropati cijelu 
 
 1. Kreacija scheme/usera:
   a) Logirati se kao system
-  b) Pokrenuti skriptu create_user.sql i slijediti upute
+  b) Pokrenuti skriptu `create_user.sql` i slijediti upute
 2. Instalacija primjera:
   a) Logirati se kao user kreiran u koraku 1
-  b) Pokrenuti skriptu install.sql
+  b) Pokrenuti skriptu `install.sql`
 
 ###Instalacija testova
 Uz primjer dolaze testovi rađeni pomoću [utPlsql](http://sourceforge.net/projects/utplsql/files/) frameworka čija je instalacija potrebna da bi testovi radili.
