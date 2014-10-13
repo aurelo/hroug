@@ -49,4 +49,9 @@ PROMPT Creating package bodies
 @@src/prioriteti_naplate_pkg.pkb
 @@src/naplata_pkg.pkb
 
+------------                       SCRIPTS                            ----------
+PROMPT Running post installation scripts
+exec hroug_utils_pkg.insert_app_regulator_param;
+exec hroug_utils_pkg.create_uplate_queue;
+
 PROMPT Done.

@@ -9,7 +9,9 @@ SET TERMOUT ON
 @@src/tests/ut_strategija_naplate_ot.pks
 @@src/tests/ut_uplate_queue_pkg.pks
 @@src/tests/ut_prioriteti_naplate.pks
-
+@@src/tests/ut_app_pkg.pks
+@@src/tests/ut_sms_callback.pks
+@@src/tests/ut_regulator_check_callback.pks
 
 ------------                       CREATE PACKAGE BODY                ----------
 @@src/tests/hroug_test_suite_pkg.pkb
@@ -19,4 +21,7 @@ SET TERMOUT ON
 @@src/tests/ut_strategija_naplate_ot.pkb
 @@src/tests/ut_uplate_queue_pkg.pkb
 @@src/tests/ut_prioriteti_naplate.pkb
+@@src/tests/ut_app_pkg.pkb
+@@src/tests/ut_sms_callback.pkb
+@@src/tests/ut_regulator_check_callback.pks
 

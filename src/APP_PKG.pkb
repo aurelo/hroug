@@ -9,9 +9,13 @@ is
     return pls_integer
     is
          v_type ANYType;
-         v_type_code pls_integer;
+         v_type_code pls_integer := null;
     begin
-         v_type_code := p_anydata.gettype(v_type);
+         if p_anydata is not null
+         then
+            v_type_code := p_anydata.gettype(v_type);
+         end if;
+         
          return v_type_code;
     end;
     

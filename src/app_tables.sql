@@ -79,4 +79,6 @@ alter table app_env_param add (
   foreign key (aev_id) 
   references app_env (id)
 );
-
+-------------------------------------------------------------------------------
+PROMPT Creating table APP_SEQ...
+create sequence app_seq;

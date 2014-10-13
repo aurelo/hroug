@@ -13,7 +13,7 @@ as
     begin
    
       dbms_aq.enqueue
-      ( queue_name         => 'TODO'--payment_queue_creator_pkg.get_payment_queue_name
+      ( queue_name         => uplate_queue_pkg.get_uplate_queue_name
       , enqueue_options    => queue_options
       , message_properties => message_properties
       , payload            => p_uplata

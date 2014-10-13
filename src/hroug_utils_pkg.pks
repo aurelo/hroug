@@ -154,6 +154,21 @@ who_called_me:
 ------------------------------------------------------------------------------*/
   function who_called_me(p_stack_level in pls_integer default 1)  
   return   stack_data_tab_type;
+
+  
+/**-----------------------------------------------------------------------------
+create_uplate_queue:
+ Stvara uplate queue za dizanje domenskih poruka prilikom uplata.
+ Zove se u instalacijskoj skripti
+------------------------------------------------------------------------------*/  
+  procedure create_uplate_queue;
+  
+/**-----------------------------------------------------------------------------
+insert_app_regulator_param:
+ Insertira vrijednost za REGULATOR_CHECK_THRESHOLD parametar u strukturu za
+ aplikacijske parametre
+------------------------------------------------------------------------------*/    
+  procedure insert_app_regulator_param;  
     
 end hroug_utils_pkg;
 /

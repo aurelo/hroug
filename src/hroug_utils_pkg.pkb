@@ -228,7 +228,124 @@ as
    return bundle_stack_lines;
   end;
 
+--------------------------------------------------------------------------------  
+  procedure create_uplate_queue
+  is
+  begin
+     uplate_queue_pkg.create_and_start_uplate_queue;
+     uplate_queue_pkg.create_queue_subscribers;
+     commit;
+  end;
   
+--------------------------------------------------------------------------------    
+  procedure insert_app_regulator_param
+  is 
+     c_app_code    constant app.code%type := 'HROUG';
+     c_param_name  constant app_param.name%type := 'REGULATOR_CHECK_THRESHOLD';
+     c_db_code     constant app_db.code%type :=  UPPER (SYS_CONTEXT ('userenv', 'db_name'));
+     
+     
+     v_app_id      app.id%type;
+     v_param_id    app_param.id%type;
+     v_db_id       app_db.id%type;
+     v_app_env_id  app_env.id%type;
+  begin
+     delete from app_env_param aepm
+     where  exists (
+         select   null
+         from     app_env aev
+         where    aev.id = aepm.aev_id 
+         and (exists (
+              select   null
+              from     app a
+              where    a.id = aev.app_id
+              and      a.code = c_app_code
+             )
+             and exists (
+              select   null
+              from     app_db adb
+              where    adb.id = aev.db_id
+              and      adb.code = c_db_code
+             )
+         )
+         and exists (
+          select    null
+          from      app_param ap
+          where     ap.id = aepm.apm_id
+          and       ap.name = c_param_name
+         )
+     )
+     ;  
+  
+     delete from app_env aev
+     where exists (
+      select   null
+      from     app a
+      where    a.id = aev.app_id
+      and      a.code = c_app_code
+     )
+     and exists (
+      select   null
+      from     app_db adb
+      where    adb.id = aev.db_id
+      and      adb.code = c_db_code
+     )
+     ;
+     delete from app_db where code = c_db_code;
+     delete from app_param where name = c_param_name;
+     delete from app where code = c_app_code;
+     --insert app
+     insert into app (
+      id, code, name, description       
+     )
+     values (
+      app_seq.nextval, c_app_code, 'HROUG OOT', 'Aplikacija za demonstraciju HROUG primjera'
+     )
+     returning id 
+     into v_app_id
+     ;
+     
+     --insert app param
+     insert into app_param (
+      id, name, comments
+     )
+     values (
+      app_seq.nextval, c_param_name, 'Parametar za okidac po iznosu za transakcije koje je potrebno prijaviti regulatoru'
+     )
+     returning id
+     into v_param_id
+     ;
+     
+     -- insert app database - current database name
+     insert into app_db (
+      id, code, type
+     )
+     values (
+      app_seq.nextval, c_db_code, 'TEST'
+     )
+     returning id into v_db_id
+     ;
+     
+     insert into app_env (
+      id, app_id, env_name, db_id, app_version
+     )
+     values(
+     app_seq.nextval, v_app_id, 'HROUG OOT examples TESTING', v_db_id, '1.0'
+     )
+     returning id into v_app_env_id
+     ;
+     
+     insert into app_env_param (
+      id, apm_id, aev_id, value
+     )
+     values(
+      app_seq.nextval, v_param_id, v_app_env_id, anydata.convertNumber(100000)
+     )
+     ;
+     
+     commit;
+  end;  
+
 
 end hroug_utils_pkg;
 /

@@ -12,6 +12,8 @@ alter table hroug_log add (
   constraint hroug_log_pk primary key (id)
 )
 ;
+-------------------------------------------------------------------------------
+PROMPT Creating table HROUG_LOG_SEQ...
 create sequence hroug_log_seq;
 create or replace trigger hroug_log_bir
 before insert on hroug_log
